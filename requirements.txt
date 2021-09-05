@@ -1,0 +1,4 @@
+flask==1.1.2
+flask-restful
+pydub==0.25.1
+pytest==6.2.5
