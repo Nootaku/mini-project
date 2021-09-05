@@ -8,5 +8,6 @@ COPY . .
 RUN apt-get update
 RUN apt-get install ffmpeg -y
 RUN pip install -r requirements.txt
+RUN pip install -e .
 
 CMD ["python", "api/api.py"]
