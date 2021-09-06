@@ -17,7 +17,7 @@ def get_db():
 
 # DB Queries
 def postAudioFile(user_id, phrase_id, audio_file_path):
-    """Description
+    """Insert line into db
     """
     db = get_db()
     cursor = db.cursor()

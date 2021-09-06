@@ -22,8 +22,6 @@ app.config.from_mapping(
 
 
 class GetAudio(Resource):
-    # will be used with curl as:
-    # curl --request GET http://localhost:5000/audio/user/1/phrase/1/m4a -o './test_response_file_1_1.m4a'
     def get(self, user_id, phrase_id, audio_format):
         if audio_format in app.config['ALLOWED_EXTENSIONS']:
             # get resource URI
@@ -45,8 +43,6 @@ class GetAudio(Resource):
 
 
 class PostAudio(Resource):
-    # will be used with curl as:
-    # curl --request POST "http://localhost:5000/audio/user/1/phrase/1" --form 'audio_file=@"./test_audio/car.mp3"'
     def post(self, user_id, phrase_id):
         # Check if there is a file in the request
         if 'audio_file' not in request.files:

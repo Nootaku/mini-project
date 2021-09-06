@@ -23,7 +23,7 @@ def convertAsOgg(audio_file, output_path):
 
 
 def getAudio(audio_file):
-    """Convert an audio_file to the 'OGG' format and saves the ogg file.
+    """Return audio from a file.
     """
     input_format = audio_file.rsplit('.', 1)[1].lower()
     Audio.converter = which("ffmpeg")
